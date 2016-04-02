@@ -17,3 +17,90 @@
     </li>
 {% endfor %}
 </ul>
+
+<nav class="navbar navbar-inverse .navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+<ul class="nav navbar-nav">
+    <li><a href=''>home</a></li>
+    <li><a href=''>about</a></li>
+</ul>
+  </div>
+</nav>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">WebSiteName</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Page 1</a></li>
+      <li><a href="#">Page 2</a></li>
+      <li><a href="#">Page 3</a></li>
+    </ul>
+  </div>
+</nav>
+  
+<div class="container">
+  <h3>Basic Navbar Example</h3>
+  <p>A navigation bar is a navigation header that is placed at the top of the page.</p>
+</div>
+{% for name in products %}
+<div class="container">    
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="panel panel-primary">
+        <div class="panel-heading">BLACK FRIDAY DEAL</div>
+        <div class="panel-body"><img src="http://placehold.it/150x80?text=IMAGE" class="img-responsive" style="width:100%" alt="Image"></div>
+        <div class="panel-footer">Buy 50 mobiles and get a gift card</div>
+      </div>
+{% endfor %}
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-3">lg (for larger desktops)</div>
+  </div>
+  <div class="row">
+    <div class="col-lg-3">xs (for phones)</div>
+    <div class="col-lg-3">sm (for tablets)</div>
+    <div class="col-lg-3">md (for desktops)</div>
+  </div>
+  <div class="row">
+
+
+    
+    
+    
+    
+
+    ...
+  </div>
+</div>
+
+
+ <img src="{% static "levi.jpg" %}" class="img-circle" alt='f**k' />
+
+<h1>h1 Bootstrap heading (36px)</h1>
+
+
+<ul>
+
+{% for name in myps %}
+    <li>{{ name.grouper }}
+    <ul>
+        {% for item in name.list %}
+          <li>{{ item.price }}: {{ item.description }}</li>
+        {% endfor %}
+    </ul>
+    </li>
+
+{% endfor %}
+{% endblock %}
+</ul>
+</body>
+</html>
+

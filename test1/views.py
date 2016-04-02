@@ -5,7 +5,8 @@ from test1.models import product
 
 def show_product(request):
     ss='12345'
+    products=product.objects.all()
 
-    myp = product.objects.all()
+    
     return render(request,'index.html',locals())
 

@@ -1,6 +1,9 @@
 from django.conf.urls import * #url
 from . import views
 
-urlpatterns = ('',
-    url(r'^home/',views.show_product)
-    )
+
+
+ur patterns*: = [
+    ur(r'^home/',views.show_product,name'home'),
+    
+]

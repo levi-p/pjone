@@ -1,6 +1,6 @@
 from django.conf.urls import * #url
 from . import views
 
-urlpatterns = patterns('',
+urlpatterns = [
     url(r'^home/',views.show_product)
-    )
+    ]

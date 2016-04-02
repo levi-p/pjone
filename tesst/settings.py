@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'test1',
+    'bootstrap3',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -76,18 +77,19 @@ WSGI_APPLICATION = 'tesst.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
-DATABASES = {
-     "default": {
-        "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": "mydb",
-        "USER": "postgres",
-        "PASSWORD": "levi20levi20",
-        "HOST": "localhost",
-        "PORT": 5432,
-    }
-}
-
-DATABASES['default']=dj_database_url.config()
+if DEBUG == True:
+  DATABASES = {
+       "default": {
+          "ENGINE": "django.db.backends.postgresql_psycopg2",
+          "NAME": "mydb",
+          "USER": "postgres",
+          "PASSWORD": "levi20levi20",
+          "HOST": "localhost",
+          "PORT": 5432,
+      }
+  }
+else:
+  DATABASES['default']=dj_database_url.config()
 
 
 # Password validation
